@@ -1,6 +1,7 @@
 "use client";
 
 import { ArrowRight, BellRing, MapPin, MoonStar, Sunrise } from "lucide-react";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import { Countdown } from "@/components/countdown";
 import { calculateOptimalBedTimes } from "@/lib/sleep";
@@ -107,6 +108,26 @@ export function Sleep4FajrApp() {
       <div className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-[1.2fr_0.8fr]">
         <section className="overflow-hidden rounded-[32px] border border-border bg-card shadow-panel">
           <div className="border-b border-border bg-accent px-8 py-10 text-white">
+            <div className="mb-5 flex items-center gap-3">
+              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-white/12 ring-1 ring-white/15">
+                <Image
+                  src="/icon192x192.png"
+                  alt="Sleep4Fajr logo"
+                  width={40}
+                  height={40}
+                  className="h-10 w-10"
+                  priority
+                />
+              </div>
+              <div>
+                <p className="text-sm font-medium uppercase tracking-[0.18em] text-white/72">
+                  Sleep4Fajr
+                </p>
+                <p className="text-sm text-white/72">
+                  Prayer times and sleep-cycle planning
+                </p>
+              </div>
+            </div>
             <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-white/12 px-4 py-2 text-sm">
               <MoonStar className="h-4 w-4" />
               Sleep on time for Fajr

@@ -2,9 +2,39 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Sleep4Fajr",
+  metadataBase: new URL("https://sleep4fajr.vercel.app"),
+  title: "Sleep4Fajr | Find the best time to sleep before Fajr",
   description:
-    "Find the best times to sleep before Fajr and fetch prayer times by location.",
+    "Check prayer times for your city and find the best bedtime before Fajr using complete 90-minute sleep cycles.",
+  openGraph: {
+    title: "Sleep4Fajr | Find the best time to sleep before Fajr",
+    description:
+      "Check prayer times for your city and find the best bedtime before Fajr using complete 90-minute sleep cycles.",
+    url: "https://sleep4fajr.vercel.app",
+    siteName: "Sleep4Fajr",
+    type: "website",
+    images: [
+      {
+        url: "/sleep4fajr-og.png",
+        alt: "Sleep4Fajr preview image",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Sleep4Fajr | Find the best time to sleep before Fajr",
+    description:
+      "Check prayer times for your city and find the best bedtime before Fajr using complete 90-minute sleep cycles.",
+    images: ["/sleep4fajr-og.png"],
+  },
+  icons: {
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/icon32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/icon192x192.png", sizes: "192x192", type: "image/png" },
+    ],
+    apple: [{ url: "/icon180x180.png", sizes: "180x180", type: "image/png" }],
+  },
 };
 
 export default function RootLayout({
