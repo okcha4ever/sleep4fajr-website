@@ -100,6 +100,7 @@ export function Sleep4FajrApp() {
         ["Isha", prayers.isha],
       ]
     : [];
+  const showApiEndpoints = process.env.NODE_ENV === "development";
 
   return (
     <main className="min-h-screen px-6 py-10 sm:px-8">
@@ -243,22 +244,24 @@ export function Sleep4FajrApp() {
             </div>
           </section>
 
-          <section className="rounded-[32px] border border-border bg-card p-6 shadow-panel">
-            <h2 className="text-lg font-semibold">API endpoints</h2>
-            <div className="mt-4 space-y-3 text-sm text-muted">
-              <p>
-                <span className="font-medium text-foreground">Health:</span>{" "}
-                <code>/api/health</code>
-              </p>
-              <p>
-                <span className="font-medium text-foreground">Prayer times:</span>{" "}
-                <code>/api/prayer-times?location=Algiers</code>
-              </p>
-              <p>
-                Extension base URL should point at this deployed site domain.
-              </p>
-            </div>
-          </section>
+          {showApiEndpoints ? (
+            <section className="rounded-[32px] border border-border bg-card p-6 shadow-panel">
+              <h2 className="text-lg font-semibold">API endpoints</h2>
+              <div className="mt-4 space-y-3 text-sm text-muted">
+                <p>
+                  <span className="font-medium text-foreground">Health:</span>{" "}
+                  <code>/api/health</code>
+                </p>
+                <p>
+                  <span className="font-medium text-foreground">Prayer times:</span>{" "}
+                  <code>/api/prayer-times?location=Algiers</code>
+                </p>
+                <p>
+                  Extension base URL should point at this deployed site domain.
+                </p>
+              </div>
+            </section>
+          ) : null}
         </aside>
       </div>
     </main>
