@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowRight, MapPin, MoonStar, Sunrise } from "lucide-react";
+import { ArrowRight, BellRing, MapPin, MoonStar, Sunrise } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Countdown } from "@/components/countdown";
 import { calculateOptimalBedTimes } from "@/lib/sleep";
@@ -242,6 +242,29 @@ export function Sleep4FajrApp() {
                 </p>
               )}
             </div>
+          </section>
+
+          <section className="rounded-[32px] border border-border bg-accent p-6 text-white shadow-panel">
+            <div className="flex items-center gap-2 text-sm font-medium text-white/80">
+              <BellRing className="h-4 w-4" />
+              Firefox extension
+            </div>
+            <h2 className="mt-3 text-xl font-semibold">
+              Also get the Firefox extension for bedtime reminders.
+            </h2>
+            <p className="mt-2 text-sm text-white/82">
+              Use the extension if you want Sleep4Fajr notifications directly in
+              your browser before the best time to sleep for Fajr.
+            </p>
+            <a
+              href="https://addons.mozilla.org/en-US/firefox/addon/sleep4fajr/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-5 inline-flex items-center gap-2 rounded-2xl bg-white px-4 py-3 text-sm font-medium text-accent transition hover:opacity-95"
+            >
+              Get the Firefox extension
+              <ArrowRight className="h-4 w-4" />
+            </a>
           </section>
 
           {showApiEndpoints ? (
