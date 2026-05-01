@@ -14,7 +14,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        {children}
+        <footer className="px-6 pb-8 pt-2 text-center text-sm text-[#4d5b4f] sm:px-8">
+          Made with {"<3"} by{" "}
+          <a
+            href="https://aminedevs.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-medium text-[#152018] underline decoration-[#22543d]/35 underline-offset-4 transition hover:text-[#22543d]"
+          >
+            Amine Khiari
+          </a>
+        </footer>
+      </body>
     </html>
   );
 }
